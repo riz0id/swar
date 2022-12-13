@@ -1,0 +1,20 @@
+with-compiler: ghc-9.2.4
+
+jobs: $ncpus
+
+packages: 
+  prim-swar/prim-swar.cabal 
+  swar/swar.cabal 
+
+package *
+  optimization: 2
+
+  ghc-options: -fwrite-ide-info
+
+  haddock-html: true
+  haddock-hoogle: true
+  haddock-hyperlink-source: true
+  haddock-quickjump: true
+  haddock-internal: true
+
+

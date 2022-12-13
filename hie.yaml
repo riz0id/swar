@@ -1,0 +1,16 @@
+cradle:
+  multi:
+    - path: "./prim-swar"
+      config:
+        cradle:
+          cabal:
+            - path: "./prim-swar/src"
+              component: "lib:prim-swar"
+    - path: "./swar"
+      config:
+        cradle:
+          cabal:
+            - path: "./swar/src"
+              component: "lib:swar"
+            - path: "./swar/test"
+              component: "test:test"
